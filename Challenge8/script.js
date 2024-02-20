@@ -33,6 +33,27 @@ function displayTails() {
 // 4.Create a text box and a sumbit button. When clicking 'Sumbit' button, display the text as:
 //[You name is: Simon] in a < p > tag (and this name you need to take the user's input).
 
+function displayName() {
+  //let name = document.getElementById("name");
+  //console.log(`Name is ${name}`);
+
+  //document.getElementById("myText").value = "Johnny Bravo";
+  console.log(document.getElementById("myText").value);
+  let button = document.querySelector("#submit"); //TODO: why # in id in input feel gives null??
+
+  const para = document.createElement("p");
+  //para.innerHTML = "some text here";
+  para.textContent = "dadadadad";
+
+  button.appendChild(para);
+
+  /*let name_string = `<p>name is ${
+    document.getElementById("myText").value
+  } </p>`;
+  console.log(name_string);
+  button.innerHTML = button.innerHTML + name_string;*/
+}
+
 // 5. Modify (4)th qos in such a way that if you press "enter" in the < input >, it will
 //also display the same message on the page that you're displaying above in qos-4.
 
