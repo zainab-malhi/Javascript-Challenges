@@ -18,7 +18,12 @@ function changeText() {
 // You chose: heads
 function displayHead() {
   let button = document.querySelector("#heads");
-  button.innerHTML = button.innerHTML + "<p>You choose heads</p>";
+  //button.innerHTML = button.innerHTML + "<p>You choose heads</p>";
+  const para = document.createElement("p");
+  para.innerHTML = "You chose Heads!";
+
+  let container = document.getElementById("#container");
+  button.parentNode.insertBefore(para, button);
 }
 
 // When clicking on the tails display:
@@ -27,35 +32,51 @@ function displayHead() {
 
 function displayTails() {
   let button = document.querySelector("#tails");
-  button.innerHTML = button.innerHTML + "<p>You choose Tail</p>";
+
+  const para = document.createElement("p");
+  para.innerHTML = "You chose Tails!";
+
+  let container = document.getElementById("#container");
+  button.parentNode.insertBefore(para, button);
 }
 
 // 4.Create a text box and a sumbit button. When clicking 'Sumbit' button, display the text as:
 //[You name is: Simon] in a < p > tag (and this name you need to take the user's input).
 
 function displayName() {
-  //let name = document.getElementById("name");
-  //console.log(`Name is ${name}`);
-
-  //document.getElementById("myText").value = "Johnny Bravo";
-  console.log(document.getElementById("myText").value);
   let button = document.querySelector("#submit"); //TODO: why # in id in input feel gives null??
 
+  const input = document.getElementById("myInput");
+  const inputValue = input.value;
+  console.log(inputValue);
+
   const para = document.createElement("p");
-  //para.innerHTML = "some text here";
-  para.textContent = "dadadadad";
+  para.innerHTML = inputValue;
 
-  button.appendChild(para);
+  let container = document.getElementById("#container");
+  //button.appendChild(para);
 
-  /*let name_string = `<p>name is ${
-    document.getElementById("myText").value
-  } </p>`;
-  console.log(name_string);
-  button.innerHTML = button.innerHTML + name_string;*/
+  button.parentNode.insertBefore(para, button);
 }
 
 // 5. Modify (4)th qos in such a way that if you press "enter" in the < input >, it will
 //also display the same message on the page that you're displaying above in qos-4.
+
+function press() {
+  let button = document.querySelector("#submit"); //TODO: why # in id in input feel gives null??
+
+  const input = document.getElementById("myInput");
+  const inputValue = input.value;
+  console.log(inputValue);
+
+  const para = document.createElement("p");
+  para.innerHTML = inputValue;
+
+  let container = document.getElementById("#container");
+  //button.appendChild(para);
+
+  button.parentNode.insertBefore(para, button);
+}
 
 // Challenge Exercise
 // Create an Amazon Shipping Calculator.
