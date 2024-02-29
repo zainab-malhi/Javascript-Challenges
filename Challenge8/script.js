@@ -59,6 +59,24 @@ function displayName() {
   button.parentNode.insertBefore(para, button);
 }
 
+function displayNameEnter(event) {
+  if (event.key == "Enter") {
+    let button = document.querySelector("#submit"); //TODO: why # in id in input feel gives null??
+
+    const input = document.getElementById("myInput");
+    const inputValue = input.value;
+    console.log(inputValue);
+
+    const para = document.createElement("p");
+    para.innerHTML = inputValue;
+
+    let container = document.getElementById("#container");
+    //button.appendChild(para);
+
+    button.parentNode.insertBefore(para, button);
+  }
+}
+
 // 5. Modify (4)th qos in such a way that if you press "enter" in the < input >, it will
 //also display the same message on the page that you're displaying above in qos-4.
 
@@ -78,6 +96,7 @@ function press() {
   button.parentNode.insertBefore(para, button);
 }
 
+//One Challenge remianing
 // Challenge Exercise
 // Create an Amazon Shipping Calculator.
 // What is an Amazon Shipping Calculator?

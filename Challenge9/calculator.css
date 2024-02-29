@@ -1,0 +1,21 @@
+button{
+    border: 2px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color:white;
+    border-radius: 150%;
+    padding: 25px 30px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.operation{
+    background-color: orange;
+    border: 2px solid orange;
+}
+
+h1{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
